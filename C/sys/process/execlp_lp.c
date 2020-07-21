@@ -21,6 +21,7 @@ int main(void)
     else if(pid == 0)
     {   
         execlp("ls","ls","-l","-a","-h",NULL);
+        //execl("/bin/ls","ls","-l","-a","-h",NULL);
     }
 
     return 0;
