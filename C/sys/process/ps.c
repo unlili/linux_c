@@ -25,7 +25,11 @@ int main(void)
     ps aux 原来是屏幕输出(stdout),现在是向文件fd输出
     */
 
-    execlp("ps","ps","aux",NULL);
+    execlp("ps","ps","aux",NULL);//执行成功就不会回来了
+    
+    perror("execlp fail");
+    exit(1);
+    
     //close(fd) ???
     return 0;
 }
